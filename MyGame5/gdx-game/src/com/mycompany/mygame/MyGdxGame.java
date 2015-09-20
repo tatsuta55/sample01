@@ -1,8 +1,10 @@
 package com.mycompany.mygame;
 
-import com.badlogic.gdx.*;
-import com.badlogic.gdx.graphics.*;
-import com.badlogic.gdx.graphics.g2d.*;
+import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class MyGdxGame implements ApplicationListener
 {
@@ -18,11 +20,11 @@ public class MyGdxGame implements ApplicationListener
 
 	@Override
 	public void render()
-	{        
-	    Gdx.gl.glClearColor(1, 1, 1, 1);
+	{
+	    Gdx.gl.glClearColor(1, 0, 0, 1);
 	    Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
-		batch.draw(texture, Gdx.graphics.getWidth() / 4, 0, 
+		batch.draw(texture, Gdx.graphics.getWidth() / 4, 0,
 				   Gdx.graphics.getWidth() / 2, Gdx.graphics.getWidth() / 2);
 		batch.end();
 	}
